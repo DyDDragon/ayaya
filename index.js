@@ -30,12 +30,6 @@ Client.once("ready", () => {
 
     scheduledMessage.start(); //Changer "stop" par "start" pour lancer le bot
 
-    //make the bot never stop
-    setInterval(() => {
-        console.log("Bot is still running");
-    }
-    , 1000);
-
 });
 
 Client.login(process.env.TOKEN);
