@@ -38,8 +38,7 @@ Client.once("ready", () => {
 
 });
 
-//Client.login(process.env.TOKEN);
-Client.login("OTcxMTQ2MDIwMTMyMTA2MzIw.YnGQNg.zVIsK-NY2HZpdZFwSDPdgEMUaBI")
+Client.login(process.env.TOKEN);
 
 Client.on("messageCreate", message => {
     if (message.author.bot) return;
@@ -148,4 +147,3 @@ Client.on("messageCreate", message => {
     
     
 });
-
