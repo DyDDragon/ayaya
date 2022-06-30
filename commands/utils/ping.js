@@ -15,7 +15,7 @@ module.exports = {
                 {   name: 'Uptime', value: `<t:${parseInt(client.readyTimestamp /1000)}:R>`},
             )
             .setTimestamp()
-            .setFooter({ text: interaction.user.username, icon_url: interaction.user.displayAvatarURL() });
+            .setFooter({ text: interaction.user.username, iconURL: interaction.user.displayAvatarURL() });
         interaction.editReply({ content: null, embeds: [embed]});
     }
 };
