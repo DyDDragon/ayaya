@@ -1,7 +1,6 @@
 module.exports = {
     name: 'ping',
     description: 'Commande ping'
-    once: false,
     run: (client, message, args) => {
         message.channel.send('Pong !');
     },
