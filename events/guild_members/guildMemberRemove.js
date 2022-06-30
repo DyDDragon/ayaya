@@ -14,7 +14,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setAuthor({name: `${member.user.tag} (${member.id})`, iconURL: member.user.displayAvatarURL()})
-            .setColor('#21ff81')
+            .setColor('#dc143c')
             .setDescription(`± Nom d'utilisateur : ${member.displayName}
             ± Créé le : ${creationTimestamp}> (${relativeCreationTimestamp})
             ± Rejoint le : ${joinTimestamp} (${relativeJoinTimestamp})
