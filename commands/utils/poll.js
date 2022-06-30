@@ -3,17 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'poll',
     description: 'Poster votre propre sondage',
-    run(client, message, args) {
-        if (!args[0] || !args[0].match(/^(guildMemberAd|guildMemberRemove)$/)) return message.reply('Veuillez spécifier un événement valide (\'guildMemberAdd\' ou \'guildMemberRemove\')');	
-        
-        if (args[0] == 'guildMemberAdd') {
-            client.emit('guildMemberAdd', message.member);
-            message.reply('L\'événement a été emis !');
-        } else {
-            client.emit('guildMemberRemove', message.member);
-            message.reply('L\'événement a été emis !');
-        }
-    },
+    
     options: [
         {
             name: 'title',

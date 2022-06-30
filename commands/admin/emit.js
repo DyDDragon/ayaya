@@ -6,10 +6,13 @@ module.exports = {
         
         if (args[0] == 'guildMemberAdd') {
             client.emit('guildMemberAdd', message.member);
-            message.reply('L\'événement a été emis !');
+            message.reply('L\'événement guildMemberAdd a été emis !');
+        } else if (args[0] == 'guildCreate') {
+            client.emit('guildCreate', message.guild);
+            message.reply('L\'événement guildCreate a été emis !');
         } else {
             client.emit('guildMemberRemove', message.member);
-            message.reply('L\'événement a été emis !');
+            message.reply('L\'événement guildMemberRemove a été emis !');
         }
     },
     options: [
@@ -26,6 +29,10 @@ module.exports = {
                 {
                     name: 'guildMemberRemove',
                     value: 'guildMemberRemove'
+                },
+                {
+                    name: 'guildCreate',
+                    value: 'guildCreate'
                 }
             ]
         }
@@ -35,10 +42,13 @@ module.exports = {
 
         if (eventChoice == 'guildMemberAdd') {
             client.emit('guildMemberAdd', interaction.member);
-            interaction.reply({content: 'L\'événement a été emis !', ephemereal: true});
+            interaction.reply({content: 'L\'événement guildMemberAdd a été emis !', ephemereal: true});
+        } else if (eventChoice == 'guildCreate') {
+            client.emit('guildCreate', message.guild);
+            interaction.reply({content: 'L\'événement guildCreate a été emis !', ephemereal: true});
         } else {
             client.emit('guildMemberRemove', interaction.member);
-            interaction.reply({content: 'L\'événement a été emis !', ephemereal: true});
+            interaction.reply({content: 'L\'événement guildMemberRemove a été emis !', ephemereal: true});
         }
 }
 };
