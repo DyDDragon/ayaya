@@ -12,7 +12,7 @@ module.exports = {
             .addFields(
                 {   name: 'Latence API', value: `\`\`\`${client.ws.ping}ms\`\`\``, inline: true},
                 {   name: 'Latence BOT', value: `\`\`\`${tryPing.createdTimestamp - interaction.createdTimestamp}ms\`\`\``, inline: true},
-                //{   name: 'Uptime', value: `<t:${parseInt(client.readyTimestamp /1000)}:R>`},
+                {   name: 'Uptime', value: `<t:${parseInt(client.readyTimestamp /1000)}:R>`},
             )
             .setTimestamp()
             .setFooter({ text: interaction.user.username, icon_url: interaction.user.displayAvatarURL() });
