@@ -12,12 +12,12 @@ module.exports = {
             message.reply('L\'événement a été emis !');
         }
     },
-    options: 
+    options: [
         {
             name: 'event',
             description: 'Nom de l\'événement',
+            type: 'STRING',
             required: true,
-            type: 'STRING'
             choices: [
                 {
                     name: 'guildMemberAdd',
@@ -29,6 +29,7 @@ module.exports = {
                 }
             ]
         }
+    ],
     runSlash: (client, interaction) => {
         const eventChoice = interaction.options.getString('event');
 
