@@ -2,6 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'poll',
+    permissions: ['VIEW_CHANNEL', 'SEND_MESSAGES'],
     description: 'Poster votre propre sondage',
     
     options: [

@@ -2,6 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'ping',
+    permissions: ['VIEW_CHANNEL', 'SEND_MESSAGES'],
     description: 'Commande ping',
     async runInteraction(client, interaction) {
         const tryPing = await interaction.reply({content : "Ping ?", fetchReply: true});

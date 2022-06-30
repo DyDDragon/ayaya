@@ -3,6 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'userinfo',
     type: 'USER',
+    permissions: ['VIEW_CHANNEL', 'SEND_MESSAGES'],
     async runInteraction(client, interaction) {
         const member = await interaction.guild.members.fetch(interaction.targetId);
 
