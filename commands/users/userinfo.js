@@ -16,9 +16,8 @@ module.exports = {
                     {   name: 'Bot', value: `${member.user.bot ? '🟢' : '🔴'}`, inline: true},
                     {   name: 'Roles', value: `${member.roles.cache.map(role => role).join(', ').replace(', @everyone', '')}`},
                     {   name: 'A créé son compte le', value: `<t:${parseInt(member.user.createdTimestamp /1000)}:f> (<t:${parseInt(member.user.createdTimestamp /1000)}:R>)`},
-                    {   name: 'A rejoint le serveur le le', value: `<t:${parseInt(member.joinedTimestamp /1000)}:f> (<t:${parseInt(member.joinedTimestamp /1000)}:R>)`},
+                    {   name: 'A rejoint le serveur le', value: `<t:${parseInt(member.joinedTimestamp /1000)}:f> (<t:${parseInt(member.joinedTimestamp /1000)}:R>)`},
             )
         interaction.reply({ embeds:[embed], ephemeral: true });
     }
 };
-//a
