@@ -1,5 +1,6 @@
 const { Client, Collection } = require('discord.js');
 const dotenv = require('dotenv'); dotenv.config();
+const mongoose = require('mongoose');
 const client = new Client({ intents: 513 });
 
 client.commands = new Collection();
@@ -11,6 +12,13 @@ process.on('uncaughtException', (err, origin) => { console.log(`Uncaught excepti
 process.on('unhandledRejection', (reason, promise) => { console.log(`Unhandled rejection: ${reason}\n-----\n`, promise) });
 process.on('warning', (...args) => console.log(...args));
 
-client.login(process.env.TOKEN);
+mongoose.connect(process.env.DB_URI, {
+    autoIndex: false,
+    maxPoolSize: 10,
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000,
+    family: 4
+}).then(() => { console.log('Connected to MongoDB') })
+.catch(err => { console.log(err); });
 
-//force
+client.login(process.env.TOKEN);
