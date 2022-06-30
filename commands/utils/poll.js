@@ -40,7 +40,7 @@ module.exports = {
             .setTimestamp();
 
         const poll = await interaction.reply({ embeds: [embed], fetchReply: true });
-        poll.react('<a:YES:863425913059934228>')
-        poll.react('<a:NO:863425997823279134>')
+        poll.react('<:BRed:789598874678984755>')
+        poll.react('<:GoAwaySatan:694858112703660083>')
     }
 };
