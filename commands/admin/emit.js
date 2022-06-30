@@ -44,7 +44,7 @@ module.exports = {
             client.emit('guildMemberAdd', interaction.member);
             interaction.reply({content: 'L\'événement guildMemberAdd a été emis !', ephemereal: true});
         } else if (eventChoice == 'guildCreate') {
-            client.emit('guildCreate', message.guild);
+            client.emit('guildCreate', interaction.guild);
             interaction.reply({content: 'L\'événement guildCreate a été emis !', ephemereal: true});
         } else {
             client.emit('guildMemberRemove', interaction.member);
