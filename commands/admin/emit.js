@@ -37,7 +37,7 @@ module.exports = {
             ]
         }
     ],
-    runSlash(client, interaction) {
+    runInteraction(client, interaction) {
         const eventChoice = interaction.options.getString('event');
 
         if (eventChoice == 'guildMemberAdd') {
