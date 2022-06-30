@@ -12,6 +12,8 @@ module.exports = async client => {
 
         if(!cmd.permissions) return console.log(`-----\n Commande ${cmd.name} invalide: pas de permission.\n Fichier -> ${cmdFile}\n-----`);
 
+        if(!cmd.category) return console.log(`-----\n Commande ${cmd.name} invalide: pas de catégorie.\n Fichier -> ${cmdFile}\n-----`);
+
         cmd.permissions.forEach(permission => {
             if(!permissionList.includes(permission)){
                 return console.log(`-----\n Erreur de typo: permission ${permission} inconnue.\n Fichier -> ${cmdFile}\n-----`);

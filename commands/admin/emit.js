@@ -1,5 +1,6 @@
 module.exports = {
     name: 'emit',
+    category: 'admin',
     description: 'Emettre un événement',
     run(client, message, args) {
         if (!args[0] || !args[0].match(/^(guildMemberAd|guildMemberRemove)$/)) return message.reply('Veuillez spécifier un événement valide (\'guildMemberAdd\' ou \'guildMemberRemove\')');	
