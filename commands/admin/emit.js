@@ -42,13 +42,13 @@ module.exports = {
 
         if (eventChoice == 'guildMemberAdd') {
             client.emit('guildMemberAdd', interaction.member);
-            interaction.reply({content: 'L\'événement guildMemberAdd a été emis !', ephemereal: true});
+            interaction.reply({content: 'L\'événement guildMemberAdd a été emis !', ephemeral: true});
         } else if (eventChoice == 'guildCreate') {
             client.emit('guildCreate', interaction.guild);
-            interaction.reply({content: 'L\'événement guildCreate a été emis !', ephemereal: true});
+            interaction.reply({content: 'L\'événement guildCreate a été emis !', ephemeral: true});
         } else {
             client.emit('guildMemberRemove', interaction.member);
-            interaction.reply({content: 'L\'événement guildMemberRemove a été emis !', ephemereal: true});
+            interaction.reply({content: 'L\'événement guildMemberRemove a été emis !', ephemeral: true});
         }
 }
 };
