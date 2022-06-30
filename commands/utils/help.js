@@ -21,7 +21,7 @@ module.exports = {
         }
 
         return message.channel.send(noArgsEmbed);
-    }
+    },
     options: [
         {
             name: 'title',
