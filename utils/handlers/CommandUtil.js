@@ -9,3 +9,4 @@ module.exports = async client => {
         console.log(`Loaded command: ${cmd.name}`);
     })
 }
+
