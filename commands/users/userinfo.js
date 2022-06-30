@@ -9,7 +9,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor('#8e48f7')
             .setAuthor({ name: `${member.user.tag} (${member.id})`, iconURL: member.user.bot ? 'https://toppng.com/uploads/preview/discordbot-bot-discord-11563261320iwm1tpnosh.png' : 'https://banner2.cleanpng.com/20180423/aue/kisspng-computer-icons-person-icon-design-knowledge-clipart-5add9d8666ce44.4556482015244732224211.jpg' })
-            .setImage(member.user.displayAvatarURL())
+            .setThumbnail(member.user.displayAvatarURL())
             .addFields(
                     {   name: 'Nom', value: `${member.displayName}`, inline: true},
                     {   name: 'Modérateur', value: `${member.kickable ? '🔴' : '🟢'}`, inline: true},
