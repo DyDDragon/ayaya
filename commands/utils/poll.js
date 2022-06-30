@@ -40,7 +40,7 @@ module.exports = {
             .setTimestamp();
 
         const poll = await interaction.reply({ embeds: [embed], fetchReply: true });
-        poll.react('<:BRed:789598874678984755>')
-        poll.react('<:GoAwaySatan:694858112703660083>')
+        poll.react('✅');
+        poll.react('❌');
     }
 };
