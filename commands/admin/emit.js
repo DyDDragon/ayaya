@@ -1,7 +1,7 @@
 module.exports = {
     name: 'emit',
     description: 'Emettre un événement',
-    run: (client, message, args) => {
+    run(client, message, args) {
         if (!args[0] || !args[0].match(/^(guildMemberAd|guildMemberRemove)$/)) return message.reply('Veuillez spécifier un événement valide (\'guildMemberAdd\' ou \'guildMemberRemove\')');	
         
         if (args[0] == 'guildMemberAdd') {
@@ -30,7 +30,7 @@ module.exports = {
             ]
         }
     ],
-    runSlash: (client, interaction) => {
+    runSlash(client, interaction) {
         const eventChoice = interaction.options.getString('event');
 
         if (eventChoice == 'guildMemberAdd') {
