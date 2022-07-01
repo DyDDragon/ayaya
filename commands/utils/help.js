@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const { readdirSync } = require('fs');
-const commandFolder = readdirSync('./commands/');
+const commandFolder = readdirSync('./commands');
 const prefix = '$$';
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
         if (!args.length) {
             const noArgsEmbed = new MessageEmbed()
                 .setColor('#f54ea7')
-                .addField('Liste des commandes', `Une liste de toutes les catégories disponibles et leurs commandes.\nPour plus d'informations sur une commande, tapez \`${prefix}help <command>\``)
+                .addField('Liste des commandes', `Une liste de toutes les catégories disponibles et leurs commandes.\nPour plus d'informations sur une commande, tapez ${prefix}help <command>`)
 
             for (const category of commandFolder) {
                 noArgsEmbed.addField(
